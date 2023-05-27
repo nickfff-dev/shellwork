@@ -12,7 +12,7 @@ int main(void)
 	{
 		printf("$ ");
 		line = read_line();
-		array = strtok(line, " ");
+		array = spltstr(line);
 		if (array[0] == NULL)
 		{  
 			perror("Error");
