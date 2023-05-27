@@ -23,7 +23,7 @@ int _strcmp(char *s1, char *s2);
 
 char *read_line(void);
 int _putchar(char c);
-int execute_command(char **array);
+int execute_command(char **array, char *line);
 int execute_path_commands(char **array);
 int _runs_command(char *path, char **array);
 char *build_path(char *token, char *command);

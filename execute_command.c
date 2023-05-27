@@ -5,7 +5,7 @@
   * @array: parameter of type char **.
   * Return: int .
  */
-int execute_command(char **array)
+int execute_command(char **array, char *line)
 {
 	int status = 0;
 
@@ -24,6 +24,7 @@ int execute_command(char **array)
 	if (_strcmp(array[0], "exit") == 0)
 	{
 		free_array(array);
+		free(line);
 		exit(0);
 	}
 	status = execute_path_commands(array);

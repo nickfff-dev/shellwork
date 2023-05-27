@@ -25,7 +25,7 @@ int main(void)
 			free_array(array);
 			continue;
 		}
-		status = execute_command(array);
+		status = execute_command(array, line);
 		if (status == 1)
 		{	
 			fprintf(stderr, "hsh: %s: command not found\n", array[0]);
