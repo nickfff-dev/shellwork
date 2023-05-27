@@ -25,11 +25,9 @@ int main(void)
 		if (status == 1)
 		{
 			perror("Error");
-			free(array);
 			free(line);
 			continue;
 		}
-		free(array);
 		free(line);
 	}
 	return (0);

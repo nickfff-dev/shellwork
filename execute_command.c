@@ -6,14 +6,14 @@ int execute_command(char **array)
 	if (array[0][0] == '/')
     {
 		status = execute_external_command(array);
-
+        free(array);
 		return (status);
 	}
 
 	if (_strcmp(array[0], "env") == 0)
 	{
 		status = execute_builtin_env(array);
-
+		free(array);
 		return (status);
 	} 
 	 
@@ -24,6 +24,6 @@ int execute_command(char **array)
 	 }
 
 	status = execute_path_commands(array);
-
+	free(array);
 	return (status);
 }
