@@ -39,7 +39,7 @@ int find_command(char **array)
             return (1);
         }
 
-        if (stat(path, &st) == 0)
+        if (stat(wath, &st) == 0)
         {
             if (_runs_command(wath, array) == 0)
             {
