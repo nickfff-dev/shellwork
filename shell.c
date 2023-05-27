@@ -1,13 +1,9 @@
 #include "main.h"
 
 /**
- * main - simple shell
- *
- * Return: 0 on success, 1 on failure
+  * main - The entry point of the program
+  * Return: int .
  */
-
-
-
 int main(void)
 {
 	char *line = NULL;
@@ -20,13 +16,12 @@ int main(void)
 		line = read_line();
 		array = spltstr(line);
 		if (array[0] == NULL)
-		{  
+		{
 			perror("Error");
 			free(line);
 			free(array);
 			continue;
 		}
-		
 		status = execute_command(array);
 		if (status == 1)
 		{
@@ -38,47 +33,4 @@ int main(void)
 	}
 	return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
