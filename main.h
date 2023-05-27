@@ -38,5 +38,6 @@ char *get_path_env(void);
 void free_array(char **array);
 char *extract_word(char *str, int start, int end);
 char **allocate_array(int count);
+int find_command_in_path(char *token, char **array);
 
 #endif
