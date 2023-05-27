@@ -7,10 +7,13 @@
  */
 int find_command_in_path(char *token, char **array)
 {
-    char *wath = build_path(token, array[0]);
+    struct stat st;
+    char *wath;
+
+    wath = build_path(token, array[0]);
     if (wath == NULL)
         return (1);
-    struct stat st;
+    
     if (stat(wath, &st) == 0)
     {
         if (_runs_command(wath, array) == 0)
