@@ -8,6 +8,7 @@ char **spltstr(char *str)
 {
     int i, j, k, count;
     char **array;
+    int word_length;
 
     if (str == NULL || *str == '\0')
         return NULL;
@@ -24,7 +25,7 @@ char **spltstr(char *str)
                 j++;
         }
 
-        int word_length = get_word_length(str, j);
+        word_length = get_word_length(str, j);
         array[i] = malloc(sizeof(char) * (word_length + 1));
         if (array[i] == NULL)
         {
