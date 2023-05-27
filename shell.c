@@ -17,7 +17,6 @@ int main(void)
 		array = spltstr(line);
 		if (array[0] == NULL)
 		{
-			perror("Error");
 			free(line);
 			free_array(array);
 			continue;
@@ -25,7 +24,6 @@ int main(void)
 		status = execute_command(array);
 		if (status == 1)
 		{
-			perror("Error");
 			free(line);
 			continue;
 		}

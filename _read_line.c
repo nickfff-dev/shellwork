@@ -7,14 +7,13 @@ char *read_line(void)
 {
 	char *line = NULL;
 	size_t len = 0;
-
 	ssize_t nread;
-	nread = getline (&line, &len, stdin);
+
+	nread = getline(&line, &len, stdin);
 	if (nread == -1)
 	{
-		perror("Error");
 		free(line);
-		exit(1);
+		exit(0);
 	}
 	if (line[0] == '\n')
 	{

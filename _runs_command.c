@@ -13,14 +13,12 @@ int _runs_command(char *path, char **array)
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-		perror("Error:");
 		exit(1);
 	}
 	if (child_pid == 0)
 	{
 		if (execve(path, array, environ) == -1)
 		{
-			perror("Error");
 			free(path);
 			exit(1);
 		}

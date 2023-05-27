@@ -11,5 +11,9 @@ int execute_path_commands(char **array)
 	{
 		return (0);
 	}
-	return (1);
+	else
+	{
+		fprintf(stderr, "%s: 1: %s: not found\n", array[0], array[0]);
+		return (1);
+	}
 }

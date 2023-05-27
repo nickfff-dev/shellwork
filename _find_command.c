@@ -13,7 +13,6 @@ int find_command(char **array)
 
 	if (path_env == NULL || path_env_copy == NULL)
 	{
-		perror("Error");
 		return (1);
 	}
 	while (token != NULL)
