@@ -29,6 +29,8 @@ int main(void)
 			free(line);
 			continue;
 		}
+		free(array);
+		free(line);
 	}
 	return (0);
 }
