@@ -16,7 +16,7 @@ char *read_line(void)
         {
           perror("Error");
           free(line);
-          return (NULL);
+           exit(1);
         }
 
         if (line[0] == '\n')
