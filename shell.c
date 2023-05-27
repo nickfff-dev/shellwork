@@ -19,7 +19,7 @@ int main(void)
 		{
 			perror("Error");
 			free(line);
-			free(array);
+			free_array(array);
 			continue;
 		}
 		status = execute_command(array);
@@ -33,4 +33,3 @@ int main(void)
 	}
 	return (0);
 }
-
