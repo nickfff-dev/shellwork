@@ -21,6 +21,7 @@ int _runs_command(char *path, char **array)
         if (execve(path, array, environ) == -1)
         {
             perror("Error");
+            free(path);
             exit(1);
         }
     }
