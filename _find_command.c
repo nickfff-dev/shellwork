@@ -7,26 +7,17 @@
  */
 int find_command(char **array)
 {
-	char *path_env = NULL;
-	char *path_env_copy = NULL;
-	char *token = NULL;
+	char *path_env = get_path_env();
+	char *path_env_copy = _strdup(path_env);
+	char *token = strtok(path_env_copy, ":");
 	char *wath = NULL;
 	struct stat st;
 
-	path_env = get_path_env();
-	if (path_env == NULL)
+	if (path_env == NULL || path_env_copy == NULL)
 	{
 		perror("Error");
 		return (1);
 	}
-	path_env_copy = _strdup(path_env);
-	if (path_env_copy == NULL)
-	{
-		perror("Error");
-		free(path_env_copy);
-		return (1);
-	}
-	token = strtok(path_env_copy, ":");
 	while (token != NULL)
 	{
 		wath = build_path(token, array[0]);
@@ -48,12 +39,8 @@ int find_command(char **array)
 				return (1);
 			}
 		}
-		else
-		{
 			free(wath);
 			token = strtok(NULL, ":");
-			continue;
-		}
 	}
 	free(path_env_copy);
 	return (1);
