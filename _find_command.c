@@ -10,7 +10,7 @@ int find_command(char **array)
     char *path_env = NULL;
     char *path_env_copy = NULL;
     char *token = NULL;
-    char *path = NULL;
+    char *wath = NULL;
     struct stat st;
     
     
@@ -31,7 +31,7 @@ int find_command(char **array)
     token = strtok(path_env_copy, ":");
     while (token != NULL)
     {
-        path = build_path(token, array[0]);
+        wath = build_path(token, array[0]);
 
         if (path == NULL)
         {
@@ -41,7 +41,7 @@ int find_command(char **array)
 
         if (stat(path, &st) == 0)
         {
-            if (_runs_command(path, array) == 0)
+            if (_runs_command(wath, array) == 0)
             {
                 free(path_env_copy);
                 return (0);
@@ -56,7 +56,7 @@ int find_command(char **array)
             
         }
         else{
-            free(path);
+            free(wath);
             token = strtok(NULL, ":");   
             continue;
         }  
