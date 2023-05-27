@@ -32,7 +32,7 @@ int main(void)
 			free(line);
 			free_array(array);
 		}
-		free(line);
+	
 		free_array(array);
 	}
 	return (0);
