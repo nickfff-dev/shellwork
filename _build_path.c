@@ -8,21 +8,29 @@
  */
 char *build_path(char *token, char *command)
 {
-    
     int token_len = _strlen(token);
+    int j;
+    int i;
     int command_len = _strlen(command);
     char *path = malloc(sizeof(char) * (token_len + command_len + 2));
 
     if (path == NULL)
-    {   
+    {
         free(path);
-        return (NULL);
+        return NULL;
     }
 
-    path = _strcat(path, token);
-    path = _strcat(path, "/");
-    path = _strcat(path, command);
+    for (i = 0; i < token_len; i++)
+    {
+        path[i] = token[i];
+    }
+    path[i++] = '/';
     
+    for (j = 0; j < command_len; j++, i++)
+    {
+        path[i] = command[j];
+    }
+    path[i] = '\0';
 
-    return (path);
+    return path;
 }
