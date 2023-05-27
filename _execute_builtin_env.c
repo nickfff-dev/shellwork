@@ -18,7 +18,6 @@ int execute_builtin_env(char **array)
 		}
 		_putchar('\n');
 	}
-	free(array);
 	return (0);
 	
 }
