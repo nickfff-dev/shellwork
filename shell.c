@@ -31,7 +31,10 @@ int main(void)
 			fprintf(stderr, "hsh: %s: command not found\n", array[0]);
 			free(line);
 			free_array(array);
+			continue;
 		}
+		free(line);
+		free_array(array);
 	}
 	return (0);
 }
