@@ -16,14 +16,14 @@ int execute_external_command(char **array)
 		child_pid = fork();
 		if (child_pid == -1)
 		{
-			fprintf(stderr, "%s: 1: %s: Command not found\n", array[0], array[0]);
+			
 			return (1);
 		}
 		if (child_pid == 0)
 		{
 			if (execve(array[0], array, environ) == -1)
 			{
-				fprintf(stderr, "%s: 1: %s: Command not found\n", array[0], array[0]);
+
 				return (1);
 			}
 		}
