@@ -10,10 +10,20 @@
  */
 char *extract_word(char *str, int start, int end)
 {
-    char *word = malloc(sizeof(char) * (end - start + 2));
+    int i, j;
+    char *word;
+
+    word = malloc(sizeof(char) * (end - start + 2));
     if (word == NULL)
+    {
         return (NULL);
-    strncpy(word, &str[start], end - start + 1);
-    word[end - start + 1] = '\0';
+    }
+    
+    for (i = start, j = 0; i <= end; i++, j++)
+    { 
+        word[j] = str[i];
+    }
+    word[j] = '\0';
+
     return (word);
 }
