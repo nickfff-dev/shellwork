@@ -12,7 +12,7 @@ int execute_command(char **array)
 
 	if (_strcmp(array[0], "env") == 0)
 	{
-		status = execute_builtin_env(array);
+		status = execute_builtin_env();
 		free(array);
 		return (status);
 	} 

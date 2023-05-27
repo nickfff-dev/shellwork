@@ -27,7 +27,7 @@ int _runs_command(char *path, char **array);
 char *build_path(char *token, char *command);
 int find_command(char **array);
 int execute_external_command(char **array);
-int execute_builtin_env(char **array);
+int execute_builtin_env(void);
 int count_words(char *str);
 int get_word_length(char *str, int start);
 char *get_path_env(void);

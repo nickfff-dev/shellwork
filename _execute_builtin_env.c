@@ -4,7 +4,7 @@
  * @array: array of arguments
  * Return: 0 on success, 1 on failure
  */
-int execute_builtin_env(char **array)
+int execute_builtin_env(void)
 {
     char **env;
     int i = 0;
