@@ -1,18 +1,16 @@
 #include "main.h"
 
-
 /**
- * free_array - frees an array of strings
- * @array: the array to free
- */
+* free_array - frees an array of strings
+* @array: the array to free
+*/
 void free_array(char **array)
 {
-    int i;
+	int i;
 
-    for (i = 0; array[i] != NULL; i++)
-    {
-        free(array[i]);
-    }
-
-    free(array);
+	for (i = 0; array[i] != NULL; i++)
+	{
+		free(array[i]);
+	}
+	free(array);
 }
