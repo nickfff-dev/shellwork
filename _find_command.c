@@ -33,7 +33,7 @@ int find_command(char **array)
     {
         wath = build_path(token, array[0]);
 
-        if (path == NULL)
+        if (wath == NULL)
         {
             free(path_env_copy);
             return (1);
