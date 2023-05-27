@@ -12,6 +12,6 @@ int execute_path_commands(char **array)
     { 
 		return (0);
 	}
-    free(array);
+    
     return (1);
 }

@@ -17,7 +17,7 @@ int execute_external_command(char **array)
             if (child_pid == -1)
             {
                 perror("Error");
-                free(array);
+                
                 return (1);
             }
             if (child_pid == 0)
@@ -25,18 +25,18 @@ int execute_external_command(char **array)
                 if (execve(array[0], array, environ) == -1)
                 {
                     perror("Error");
-                    free(array);
+                    
                     return (1);
                 }
             }
             else
             {
                 wait(&status);
-                free(array);
+                
                 return (0);
             }
         }
-            free(array);
+            
             return (1);
   
 }

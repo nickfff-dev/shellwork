@@ -27,7 +27,6 @@ int _runs_command(char *path, char **array)
     else
     {
         wait(&status);
-        free(array);
         free(path);
         return (0);
     }
