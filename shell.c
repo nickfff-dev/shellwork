@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * main - simple shell
+ *
+ * Return: 0 on success, 1 on failure
+ */
+
 
 
 int main(void)
@@ -32,6 +38,7 @@ int main(void)
 	}
 	return (0);
 }
+
 
 
 

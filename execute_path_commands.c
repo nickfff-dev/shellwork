@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * execute_path_commands - executes commands in the PATH environment variable
  * @array: array of arguments

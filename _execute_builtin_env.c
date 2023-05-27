@@ -19,5 +19,4 @@ int execute_builtin_env(void)
 		_putchar('\n');
 	}
 	return (0);
-	
 }

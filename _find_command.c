@@ -12,8 +12,7 @@ int find_command(char **array)
     char *token = NULL;
     char *wath = NULL;
     struct stat st;
-    
-    
+       
     path_env = get_path_env();
     if (path_env == NULL)
 	{
@@ -38,7 +37,6 @@ int find_command(char **array)
             free(path_env_copy);
             return (1);
         }
-
         if (stat(wath, &st) == 0)
         {
             if (_runs_command(wath, array) == 0)
@@ -51,9 +49,6 @@ int find_command(char **array)
              free(path_env_copy);
                 return (1);
             }
-        
-            
-            
         }
         else{
             free(wath);

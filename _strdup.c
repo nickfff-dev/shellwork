@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * _strdup - duplicates a string
+ * @str: string to duplicate
+ *
+ * Return: pointer to new string, or NULL if malloc fails
+ */
+
 char * _strdup(char *str)
 {
    

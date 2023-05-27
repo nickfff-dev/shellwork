@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * execute_command - executes a command
+ * @array: array of command and arguments
+ *
+ * Return: 0 on success, 1 on failure
+ */
+
 int execute_command(char **array)
 {
 	int status = 0;

@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * execute_external_command - executes an external command
  * @array: array of arguments
@@ -38,5 +37,4 @@ int execute_external_command(char **array)
         }
             
             return (1);
-  
 }

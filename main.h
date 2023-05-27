@@ -33,4 +33,3 @@ int get_word_length(char *str, int start);
 char *get_path_env(void);
 
 #endif
-

@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * read_line - reads a line from stdin
  * Return: pointer to the line
@@ -34,7 +33,5 @@ char *read_line(void)
 
            
           return (line);
-        }
-      
-      
+        } 
 }
