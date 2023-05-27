@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * find_command_in_path - finds a command in a single directory listed in the token environment variable
  * @token: a directory in the token environment variable
