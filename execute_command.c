@@ -3,6 +3,7 @@
 /**
   * execute_command - the function name
   * @array: parameter of type char **.
+  * @line: parameter to free when exiting
   * Return: int .
  */
 int execute_command(char **array, char *line)
@@ -12,13 +13,10 @@ int execute_command(char **array, char *line)
 	if (array[0][0] == '/')
 	{
 		status = execute_external_command(array);
-		
 		return (status);
 	}
 	if (_strcmp(array[0], "env") == 0)
-	{
-		status = execute_builtin_env();
-		
+	{status = execute_builtin_env();
 		return (status);
 	}
 	if (_strcmp(array[0], "exit") == 0)

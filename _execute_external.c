@@ -16,7 +16,6 @@ int execute_external_command(char **array)
 		child_pid = fork();
 		if (child_pid == -1)
 		{
-			
 			return (1);
 		}
 		if (child_pid == 0)

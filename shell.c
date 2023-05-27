@@ -15,7 +15,7 @@ int main(void)
 		printf("$ ");
 		line = read_line();
 		if (line == NULL)
-		{ 
+		{
 			continue;
 		}
 		array = spltstr(line);
@@ -27,7 +27,7 @@ int main(void)
 		}
 		status = execute_command(array, line);
 		if (status == 1)
-		{	
+		{
 			fprintf(stderr, "hsh: %s: command not found\n", array[0]);
 			free(line);
 			free_array(array);
