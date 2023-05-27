@@ -8,15 +8,11 @@
  */
 char *build_path(char *token, char *command)
 {
-    char *path = NULL;
-    int token_len = 0;
-    int command_len = 0;
+    
+    int token_len = _strlen(token);
+    int command_len = _strlen(command);
+    char *path = malloc(sizeof(char) * (token_len + command_len + 2));
 
-
-    token_len = _strlen(token);
-    command_len = _strlen(command);
-
-    path = malloc(sizeof(char) * (token_len + command_len + 2));
     if (path == NULL)
     {   
         free(path);
