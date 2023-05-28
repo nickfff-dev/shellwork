@@ -12,26 +12,27 @@ int main(void)
 
 	while (1)
 	{
-		printf("$ ");
 		line = read_line();
-		if (line == NULL)
+		if (line[0] == '\0')
 		{
-			continue;
+			free(line);
+			exit(0);
 		}
 		array = spltstr(line);
 		if (array[0] == NULL)
 		{
 			free(line);
 			free_array(array);
-			continue;
 		}
 		status = execute_command(array, line);
 		if (status == 1)
 		{
 			fprintf(stderr, "hsh: %s: command not found\n", array[0]);
+		}
+		else if (status == 2)
+		{
 			free(line);
 			free_array(array);
-			continue;
 		}
 		free(line);
 		free_array(array);

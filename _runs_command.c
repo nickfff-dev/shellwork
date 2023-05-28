@@ -29,5 +29,5 @@ int _runs_command(char *path, char **array)
 		free(path);
 		return (0);
 	}
-	return (1);
+	return (status);
 }

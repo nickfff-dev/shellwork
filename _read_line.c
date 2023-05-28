@@ -9,24 +9,22 @@ char *read_line(void)
 	size_t len = 0;
 	ssize_t nread;
 
+	printf("$ ");
 	nread = getline(&line, &len, stdin);
 	if (nread == -1)
 	{
 		free(line);
-		exit(0);
+		exit(1);
 	}
 	if (line[0] == '\n')
 	{
 		free(line);
-		return (NULL);
+		exit(0);
 	}
-	else
-	{
 		if (line[nread - 1] == '\n')
 		{
 			line[nread - 1] = '\0';
 			--nread;
 		}
 		return (line);
-	}
 }
