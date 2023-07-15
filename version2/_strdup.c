@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-  * _strdup - the function name
-  * @str: parameter of type char *.
-  * Return: char * .
- */
+* _strdup - the function name
+* @str: parameter of type char *.
+* Return: char * .
+*/
 char *_strdup(char *str)
 {
 	char *dup;
