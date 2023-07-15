@@ -1,8 +1,9 @@
 #include "main.h"
 
-int _executor(char *line, char **array,char **argv,int cmdnum, struct stat *st, int status)
+int _executor(char *line, char **array, char **argv,
+int cmdnum, struct stat *st, int status)
 {
-    pid_t child_pid;
+	pid_t child_pid;
 
 	child_pid = fork();
 	if (child_pid == -1)

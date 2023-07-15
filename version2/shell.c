@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
   * main - The entry point of the program
   * @argc: parameter of type int .
@@ -26,7 +25,7 @@ int main(int argc, char **argv)
 	}
 	while (is_interactivemode)
 	{
-		write (1, "$ ", 2);
+		write(1, "$ ", 2);
 		tokencount = 0;
 		x = getline(&line, &str_len, stdin);
 		if (x < 0)

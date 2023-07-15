@@ -10,15 +10,15 @@
 int _check_frmt(va_list *args, const char *frmt, int x)
 {
 	int i = 0, j = 0;
-
 	format smformts[] = {
-    {"s", _pr_str},
-    {"d", _prt_dgt},
-    {"i", _prt_dgt},
-    {NULL, NULL}};
+		{"s", _pr_str},
+		{"d", _prt_dgt},
+		{"i", _prt_dgt},
+		{NULL, NULL}
+	};
+
 	x++;
-	
-    if (frmt[x] == ' ')
+	if (frmt[x] == ' ')
 	{
 		while (frmt[x] == ' ')
 		x++;
