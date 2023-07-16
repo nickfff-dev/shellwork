@@ -11,7 +11,7 @@ int _count_token(char *line)
 
 	for (x = 0; line[x]; x++)
 	{
-		if (line[x] == ' ' || line[x] == '\t' || line[x] == '\n')
+		if (line[x] == 10 || line[x] == '\t' || line[x] == '\n' || line[x] == ' ')
 		{
 			isSpace = 1;
 		}

@@ -22,6 +22,5 @@ char **argv, int cmdnum)
 	}
 	_executor(line, array, argv, cmdnum, st);
 	free(st);
-	
 	return (0);
 }

@@ -1,11 +1,10 @@
 #include "main.h"
-
 int _executor(char *line, char **array, char **argv,
 int cmdnum, struct stat *st)
 {
 	pid_t child_pid;
 	int status = 0;
-    
+
 	child_pid = fork();
 	if (child_pid == -1)
 	{
@@ -24,7 +23,6 @@ int cmdnum, struct stat *st)
 			free(line);
 			_exit(-1);
 		}
-
 	}
 	else
 	{
@@ -38,10 +36,6 @@ int cmdnum, struct stat *st)
 	if (status == 512)
 	{
 		errno = 2;
-	}
-	if (status == 65280)
-	{
-		errno = 127;
 	}
 	return (status);
 }

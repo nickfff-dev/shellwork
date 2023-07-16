@@ -5,14 +5,15 @@
   * @argv: parameter of type char **.
   * Return: int .
  */
-int main(int argc, char **argv)
+
+int main(int __attribute__((__unused__)) argc, char **argv)
 {
 	char *line = NULL;
 	size_t str_len = 0;
 	int is_interactivemode, tokencount = 0, x, cmdnum = 1;
 
 	is_interactivemode = isatty(STDIN_FILENO);
-	if (is_interactivemode == 0 &&  argc == 1)
+	if (is_interactivemode == 0 && argc == 1)
 	{
 		while (getline(&line, &str_len, stdin) > 0)
 		{
