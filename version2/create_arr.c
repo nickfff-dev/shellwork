@@ -20,6 +20,13 @@ char **create_array_from_line(char *line, int num_tokens, char **array)
 	}
 	otherstr = _strdup(line);
 	thirdstr = strtok(otherstr, " \t\r\n\f\v");
+	if (thirdstr == NULL)
+    {
+        free(array);
+        free(line);
+        free(otherstr);
+        return (NULL);
+    }
 	for (; thirdstr != NULL; thirdstr = strtok(NULL, " \t\r\n\f\v"))
 	array[x++] = thirdstr;
 	array2 = malloc(sizeof(char *) * (num_tokens + 1));

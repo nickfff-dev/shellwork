@@ -42,5 +42,5 @@ int execute_external_command(char *line, char **array,
 char **argv, int cmdnum);
 int handle_line(char *line, int num_tokens, char **argv, int cmdnum);
 int _executor(char *line, char **array, char **argv,
-int cmdnum, struct stat *st, int status);
+int cmdnum, struct stat *st);
 #endif

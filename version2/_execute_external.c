@@ -10,7 +10,6 @@
 int execute_external_command(char *line, char **array,
 char **argv, int cmdnum)
 {
-	int status = 0;
 	struct stat *st;
 
 	st = malloc(sizeof(struct stat));
@@ -19,21 +18,10 @@ char **argv, int cmdnum)
 		free(st);
 		_print_f("%s: %d: %s: No such file or directory\n",
 		argv[0], cmdnum, array[0]);
-		return (1);
+		return (0);
 	}
-	_executor(line, array, argv, cmdnum, st, status);
+	_executor(line, array, argv, cmdnum, st);
 	free(st);
-	if (status == 0)
-	{
-		errno = 0;
-	}
-	if (status == 512)
-	{
-		errno = 2;
-	}
-	if (status == 65280)
-	{
-		errno = 127;
-	}
-	return (status);
+	
+	return (0);
 }
